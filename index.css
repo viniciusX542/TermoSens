@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 100%;
+    background: rgb(195,195,195);
+background: linear-gradient(6deg, rgba(195,195,195,1) 0%, rgba(182,182,182,1) 36%, rgba(169,255,186,1) 100%);
+    /* Barra de rolagm no Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 0, 0) rgb(0, 0, 0);
+}
+
+
+/* Barra de rolagem no Chrome, Edge e Safari */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(195, 195, 195);
+    background: linear-gradient(90deg, rgba(195, 195, 195, 1) 0%, rgba(182, 182, 182, 1) 36%, rgba(169, 255, 186, 1) 100%);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.801);
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.logo {
+    width: 110%;
+    cursor: pointer;
+}
+
+.conteudo-principal {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 200px;
+    height: 360px;
+    width: 100%;
+}
+
+.conteudo-principal-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.conteudo-principal-texto {
+    font-family: 'Mukta', sans-serif;
+    color: rgb(37, 56, 41);
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.login-botao {
+    font-family: 'Dongle', sans-serif;
+    font-size: 32px;
+    color: aliceblue;
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s linear;
+}
+
+.login-botao:hover {
+    color: black;
+    scale: 1.02;
+    transition: 0.2s linear;
+    background-color: rgba(169, 255, 186, 1)
+}
+
+.cadastro-botao {
+    font-family: 'Dongle', sans-serif;
+    font-size: 32px;
+    color: aliceblue;
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s linear;
+}
+
+.cadastro-botao:hover {
+    color: black;
+    transition: 0.2s linear;
+    scale: 1.02;
+    background-color: rgba(169, 255, 186, 1)
+}
