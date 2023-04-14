@@ -11,8 +11,8 @@
 
 body {
     font-size: 100%;
-    background: rgb(195,195,195);
-background: linear-gradient(6deg, rgba(195,195,195,1) 0%, rgba(182,182,182,1) 36%, rgba(169,255,186,1) 100%);
+    background: rgb(195, 195, 195);
+    background: linear-gradient(6deg, rgba(195, 195, 195, 1) 0%, rgba(182, 182, 182, 1) 36%, rgba(169, 255, 186, 1) 100%);
     /* Barra de rolagm no Firefox */
     scrollbar-width: thin;
     scrollbar-color: rgb(0, 0, 0) rgb(0, 0, 0);
