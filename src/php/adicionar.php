@@ -15,14 +15,7 @@ $confirmSenha = $_POST['confirmSenha'];
 
 //Verificação de integridade
 
-$fp = fopen('usuarios.csv', 'r');
-while (($row = fgetcsv($fp)) !== false) {
-    if ($row[0] == $identificador) {
-        http_response_code(400);
-        echo "Identificador em uso!";
-        exit();
-    }
-}
+
 
 //Salvando
 
@@ -31,10 +24,10 @@ while (($row = fgetcsv($fp)) !== false) {
 // }
 
 $fp = fopen('usuarios.csv', 'a');
-fputcsv($fp, [$identificador, $nome, $email, $senha, $confirmSenha]);
+fputcsv($fp, [$identificador, $nome, $email, $senha]);
 
 //http_response_302
 
-header('location: index.php');
+header('location: /');
 
 ?>

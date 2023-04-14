@@ -75,8 +75,12 @@ body::-webkit-scrollbar-thumb {
     gap: 12px;
 }
 
-.formulario {
+form {
     display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 input {
