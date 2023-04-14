@@ -13,21 +13,26 @@
 <body>
     <header class="cabecalho">
         <a href="/"><img class="logo" src="/logo/icons8-termômetro-64.png" alt="Logo"></img></a>
+        <img src="/logo/icons8-usuário-67.png" alt="Usuario">
         <nav>
         </nav>
     </header>
 
     <section class="conteudo-principal">
         <h1 class="conteudo-principal-titulo">Login</h1>
-        <form action="">
+        <fieldset>
+            <form action="">
                 <div class="campo">
-                    <td><input type="text" class="email-Login" placeholder="Idenficiador" /></td>
+                    <td><input type="text" class="identificador-login" placeholder="Idenficiador" /></td>
                 </div>
                 <div class="campo">
-                    <td><input type="password" class="senha-Login" placeholder="Senha" /></td>
+                    <td><input type="password" class="senha-login" placeholder="Senha" /></td>
                 </div>
-            </div>
-            <button>Entrar</button>
+                </div>
+            </form>
+            <button class="login-botao">Entrar</button>
+            <a href="/"><button class="voltar-Botao">Voltar</button></a>
+        </fieldset>
     </section>
 </body>
 

@@ -39,6 +39,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     align-content: center;
     justify-content: center;
+    margin-bottom: 100px;
     padding: 10px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.801);
@@ -61,6 +62,11 @@ body::-webkit-scrollbar-thumb {
     height: 560px;
     width: 100%;
     gap: 10px;
+}
+
+.conteudo-principal-titulo {
+    font-family: 'Mukta', sans-serif;
+    font-size: 40px;
 }
 
 .login {
@@ -89,11 +95,12 @@ input:hover {
     border-width: 4px;
 }
 
-.identificador-Cad {
+.identificador-cad {
     margin-top: 30px;
 }
 
-.enviar-Botao {
+.enviar-botao {
+    margin-top: 12px;
     font-family: 'Dongle', sans-serif;
     font-size: 32px;
     color: aliceblue;
@@ -108,10 +115,23 @@ fieldset {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column wrap;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background-color: rgba(255, 255, 255, 0.801);
     border-radius: 20px;
-    width: 360px;
-    height: 360px;
+    width: 390px;
+    height: 460px;
+}
+
+.voltar-botao {
+    font-family: 'Dongle', sans-serif;
+    font-size: 32px;
+    margin-top: 20px;
+    color: aliceblue;
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s linear;
 }

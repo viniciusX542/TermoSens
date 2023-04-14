@@ -68,7 +68,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .conteudo-principal-texto {
-    font-family: 'Mukta', sans-serif;
+        font-family: 'Mukta', sans-serif;
     color: rgb(37, 56, 41);
     font-size: 20px;
     margin-top: 10px;
@@ -108,4 +108,9 @@ body::-webkit-scrollbar-thumb {
     transition: 0.2s linear;
     scale: 1.02;
     background-color: rgba(169, 255, 186, 1)
+}
+
+.cadastro-texto {
+    cursor: pointer;
+    color: red;
 }

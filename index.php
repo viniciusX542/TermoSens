@@ -13,6 +13,7 @@
 <body>
     <header class="cabecalho">
         <a href="/"><img class="logo" src="./logo/icons8-termômetro-64.png" alt="Logo"></img></a>
+        <img src="/logo/icons8-usuário-67.png" alt="Usuario">
         <nav>
 
         </nav>
@@ -22,7 +23,7 @@
         <div class="conteudo-principal-botoes">
             <a href="./src/php/login.php"><button class="login-botao">Login</button></a>
             <a href="./src/php/cadastro.php"><button class="cadastro-botao">Cadastro</button></a>
-            <h1 class="conteudo-principal-texto">Não possui uma conta? Cadastre-se.</h1>
+            <h1 class="conteudo-principal-texto">Não possui uma conta? <a href="/src/php/cadastro.php" class="cadastro-texto">Cadastre-se.</a></h1>
         </div>
     </section>
 </body>
