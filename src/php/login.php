@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="icon" href="/logo/icons8-termômetro-64.png">
-    <title>Logar</title>
+    <title>Entrar</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
     </header>
 
     <section class="conteudo-principal">
-        <h1 class="conteudo-principal-titulo">Login</h1>
+        <h1 class="conteudo-principal-titulo">Entre com sua conta</h1>
         <fieldset>
             <form action="">
                 <div class="campo">
@@ -31,7 +31,7 @@
                 </div>
             </form>
             <button class="login-botao">Entrar</button>
-            <a href="/"><button class="voltar-Botao">Voltar</button></a>
+            <a href="/"><button class="voltar-botao">Voltar</button></a>
         </fieldset>
     </section>
 </body>

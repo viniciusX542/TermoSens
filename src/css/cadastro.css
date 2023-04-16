@@ -69,12 +69,6 @@ body::-webkit-scrollbar-thumb {
     font-size: 40px;
 }
 
-.login {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
 form {
     display: flex;
     flex-flow: column wrap;
@@ -85,34 +79,59 @@ form {
 
 input {
     font-family: 'Dongle', sans-serif;
-    font-size: 30px;
+    font-size: 26px;
     color: rgb(0, 0, 0);
     margin: 5px;
-    border-width: 2px;
-    border-color: black;
+    border-right: none;
+    border-top: 5px;
+    border-left: 10px solid black;
     width: 300px;
     height: 45px;
     background-color: transparent;
+    transition: 0.20s;
+    text-align: center;
 }
 
-input:hover {
-    border-width: 4px;
+input:focus {
+    border-left: 10px solid rgba(169, 255, 186, 1) !important;
+    border-top: none;
+    border-right: none;
+    outline: 2px solid;
+    width: 300px;
+}
+
+::placeholder {
+    padding-left: 5px;
+}
+
+input:invalid {
+    border-left: 10px solid rgb(255, 6, 6);
+    border-top: none;
+    border-right: none;
+    outline: 2px solid;
+    width: 300px;
+}
+
+input:valid {
+    border-left: 10px solid rgba(169, 255, 186, 1);
+    border-top: none;
+    border-right: none;
+    outline: 2px solid;
+    width: 300px;
+}
+
+.alerta {
+    font-family: 'Mukta', sans-serif;
+    color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.alerta.alerta-warning {
+    width: 100%;
 }
 
 .identificador-cad {
     margin-top: 30px;
-}
-
-.enviar-botao {
-    margin-top: 12px;
-    font-family: 'Dongle', sans-serif;
-    font-size: 32px;
-    color: aliceblue;
-    border-radius: 10px;
-    width: 300px;
-    height: 50px;
-    background-color: rgb(0, 0, 0);
-    transition: 0.2s linear;
 }
 
 fieldset {
@@ -128,14 +147,25 @@ fieldset {
     height: 460px;
 }
 
-.voltar-botao {
+button {
     font-family: 'Dongle', sans-serif;
+    cursor: pointer;
+    margin-bottom: 15px;
     font-size: 32px;
-    margin-top: 20px;
     color: aliceblue;
-    border-radius: 10px;
     width: 300px;
     height: 50px;
     background-color: rgb(0, 0, 0);
     transition: 0.2s linear;
+}
+
+button:hover {
+    color: black;
+    scale: 1.02;
+    transition: 0.2s linear;
+    background-color: rgba(169, 255, 186, 1)
+}
+
+.enviar-botao {
+    margin-top: 20px;
 }

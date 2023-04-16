@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/cadastro.css">
     <link rel="icon" href="/logo/icons8-termômetro-64.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Cadastro</title>
 </head>
 
@@ -20,47 +21,83 @@
 
     <section class="conteudo-principal">
         <?php $fp = fopen('usuarios.csv', 'r') ?>
-        <h1 class="conteudo-principal-titulo">Cadastro</h1>
+        <h1 class="conteudo-principal-titulo">Cadastre-se</h1>
         <fieldset>
             <form id="form" action="./adicionar.php" method="POST">
-                <td><input id="identificador" type="text" class="identificador-cad" name="identificador" placeholder="Idenficiador" required></td>
-                <td><input type="text" class="nome-cad" name="nome" placeholder="Nome Completo" required></td>
-                <td><input type="email" class="email-cad" name="email" placeholder="Email" required></td>
-                <td><input id="senha" type="password" class="senha-cad" name="senha" placeholder="Senha" required></td>
-                <td><input id="confirme" type="password" class="confirm-senha-cad" name="confirmSenha" placeholder="Confirmar Senha" required></td>
-                <!--<button type="submit" class="enviar-botao">Enviar</button>
--->
-                <input type="submit">
+                <td><input id="identificador" type="text" class="identificador-cad" name="identificador"
+                        placeholder="Idenficiador" maxlength="15" min="15" required></td>
+                <div class="row">
+                    <div class="col-12 col-s-12" id="divMensagensID">
+                        <div class="alerta alerta-warning"></div>
+                    </div>
+                </div>
+                <td><input id="nome" type="text" class="nome-cad" name="nome" placeholder="Nome Completo" maxlength="50"
+                        min="20" required></td>
+                <td><input id="email" type="email" class="email-cad" name="email" placeholder="Email" maxlength="25"
+                        required></td>
+                <td><input id="senha" type="password" class="senha-cad" name="senha" placeholder="Senha" maxlength="20"
+                        minlength="8" required></td>
+                <td><input id="confirme" type="password" class="confirm-senha-cad" name="confirmSenha"
+                        placeholder="Confirmar Senha" maxlength="20" minlength="8" required></td>
+                <div class="row">
+                    <div class="col-12 col-s-12" id="divMensagens">
+                        <div class="alerta alerta-warning"></div>
+                    </div>
+                </div>
+                <button type="submit" class="enviar-botao">Enviar</button>
             </form>
-            <a href="/"><button class="voltar-botao" >Voltar</button></a>
+            <a href="/"><button class="voltar-botao">Voltar</button></a>
         </fieldset>
+
     </section>
+
     <script>
         const form = document.getElementById("form");
         const senha = document.getElementById("senha");
         const confirme = document.getElementById("confirme");
         const ver = document.getElementById("identificador");
+
+        var divMensagens = document.querySelector("#divMensagens");
+        divMensagens.textContent = ""
+        
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-            if(senha.value !== confirme.value) {
-                alert('Senhas diferentes, porfavor tente novamente');
+            if (senha.value !== confirme.value) {
+                var msg = document.createElement("div");
+                msg.classList.add("alerta")
+                msg.classList.add("alerta-warning");
+                msg.textContent = "As senhas não coincidem";
+
+                var divMensagens = document.querySelector("#divMensagens");
+                divMensagens.appendChild(msg);
             }
             const test = new XMLHttpRequest();
-            test.onreadystatechange = function() {
+            test.onreadystatechange = function () {
+                var divMensagens = document.querySelector("#divMensagensID");
+                divMensagens.textContent = "";
+
                 if (this.readyState === 4 && this.status === 200) {
-                    if(this.responseText == 'jaCadastrado') {
-                        alert('Este email ou usuario já está registrado.');
+                    if (this.responseText == 'jaCadastrado') {
+                        var msg = document.createElement("div");
+                        msg.classList.add("alerta")
+                        msg.classList.add("alerta-warning");
+                        msg.textContent = "Esse verificador já está cadastrado";
+
+                        var divMensagens = document.querySelector("#divMensagensID");
+                        divMensagens.appendChild(msg);
+
                     } else {
                         form.submit();
                     }
                 }
             }
             const dados = new FormData();
-            dados.append('user',ver.value);
-            test.open('POST','./verificar.php', true);
+            dados.append('user', ver.value);
+            test.open('POST', './verificar.php', true);
             test.send(dados);
         });
     </script>
+
 </body>
 
 </html>
