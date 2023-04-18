@@ -1,26 +1,20 @@
 <?php
-
 $identificador = $_GET['identificador'];
 
-$temp = tempnam(',', '');
+$tempName = tempnam('.', '');
 
-$fpOrigin = fopen('usuarios.csv', 'r');
-$fpTemp = fopen($temp, 'w');
-
-while (($row = fgetcsv($fpOrigin)) !== false ) {
-    if ($row[0] != $identificador) {
-        fputcsv($fpTemp, $row);
+$temp = fopen($tempName, 'w');
+$orig = fopen('usuarios.csv', 'r');
+while (($row = fgetcsv($orig)) !== false) {
+    if ($row[0] == $identificador) {
+        continue;
     }
+    fputcsv($temp, $row);
 }
+fclose($temp);
+fclose($orig);
 
-$fpOrigin = fopen('usuarios.csv', 'w');
-$fpTemp = fopen($temp, 'r');
-while (($row = fgetcsv($fpTemp)) !== false ) {
-    fputcsv($fpOrigin, $row);
-}
+rename($tempName, 'usuarios.csv');
 
-unlink($temp);
-
-http_response_code(302);
 header('location: usuarios.php');
 ?>

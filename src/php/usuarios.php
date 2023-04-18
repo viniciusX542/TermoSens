@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -31,10 +31,22 @@
                             <button>Remover</button>
                         </form>
                     </td>
+                    <td>
+                        <a href="editar.php?identificador=<?= $row[0] ?>">Editar</a>
+                    </td>
                 </tr>
             <?php endwhile ?>
         </table>
+
+        <script>
+            Array.from(document.querySelectorAll('.delete-form')).forEach(form => {
+                form.addEventListener('submit', (e) =>{
+                    if (!confirm("Tem certeza que deseja excluir este usuario?")) e.preventDefault()
+                })
+            })
+        </script>
     </section>
+    <button class="voltar-botao" onclick="location.href = document.referrer;">Voltar</button>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -31,7 +31,7 @@
                 </div>
             </form>
             <button class="login-botao">Entrar</button>
-            <a href="/"><button class="voltar-botao">Voltar</button></a>
+            <button class="voltar-botao" onclick="location.href = document.referrer;">Voltar</button>
         </fieldset>
     </section>
 </body>

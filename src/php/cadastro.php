@@ -46,7 +46,7 @@
                 </div>
                 <button type="submit" class="enviar-botao">Enviar</button>
             </form>
-            <a href="/"><button class="voltar-botao">Voltar</button></a>
+            <button class="voltar-botao" onclick="location.href = document.referrer;">Voltar</button>
         </fieldset>
 
     </section>
