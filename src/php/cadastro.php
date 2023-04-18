@@ -57,11 +57,13 @@
         const confirme = document.getElementById("confirme");
         const ver = document.getElementById("identificador");
 
-        var divMensagens = document.querySelector("#divMensagens");
-        divMensagens.textContent = ""
         
         form.addEventListener('submit', (event) => {
             event.preventDefault();
+
+            var divMensagens = document.querySelector("#divMensagens");
+            divMensagens.textContent = ""
+
             if (senha.value !== confirme.value) {
                 var msg = document.createElement("div");
                 msg.classList.add("alerta")
@@ -73,18 +75,18 @@
             }
             const test = new XMLHttpRequest();
             test.onreadystatechange = function () {
-                var divMensagens = document.querySelector("#divMensagensID");
-                divMensagens.textContent = "";
+                var divMensagens1 = document.querySelector("#divMensagensID");
+                divMensagens1.textContent = "";
 
                 if (this.readyState === 4 && this.status === 200) {
                     if (this.responseText == 'jaCadastrado') {
-                        var msg = document.createElement("div");
-                        msg.classList.add("alerta")
-                        msg.classList.add("alerta-warning");
-                        msg.textContent = "Esse verificador já está cadastrado";
+                        var msg1 = document.createElement("div");
+                        msg1.classList.add("alerta")
+                        msg1.classList.add("alerta-warning");
+                        msg1.textContent = "Esse verificador já está cadastrado";
 
-                        var divMensagens = document.querySelector("#divMensagensID");
-                        divMensagens.appendChild(msg);
+                        var divMensagens1 = document.querySelector("#divMensagensID");
+                        divMensagens1.appendChild(msg1);
 
                     } else {
                         form.submit();

@@ -26,6 +26,8 @@
             <h1 class="conteudo-principal-texto">Não possui uma conta?<a href="/src/php/cadastro.php" class="cadastro-texto">Cadastre-se.</a></h1>
         </div>
     </section>
+
+    <a href="/src/php/usuarios.php" ><button>Usuarios</button></a>
 </body>
 
 </html>
