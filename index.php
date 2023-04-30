@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 <body>
     <header class="cabecalho">
         <a href="/"><img class="logo" src="./logo/icons8-termômetro-64.png" alt="Logo"></img></a>
-        <img src="/logo/icons8-usuário-67.png" alt="Usuario">
+        <img class="usuario-logo" src="/logo/icons8-usuário-67.png" alt="Usuario">
         <nav>
 
         </nav>

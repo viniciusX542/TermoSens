@@ -36,8 +36,8 @@ body::-webkit-scrollbar-thumb {
 .cabecalho {
     display: flex;
     flex-direction: row;
-    align-items: center;
     align-content: center;
+    align-items: center;
     justify-content: center;
     padding: 10px;
     width: 100%;
@@ -48,8 +48,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 .logo {
-    width: 110%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    padding-left: 550px;
+    width: 102%;
+}
+
+.usuario-logo {
+    padding-left: 500px;
+    width: 42%;
 }
 
 .conteudo-principal {

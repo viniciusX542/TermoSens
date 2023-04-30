@@ -36,14 +36,167 @@ body::-webkit-scrollbar-thumb {
 .cabecalho {
     display: flex;
     flex-direction: row;
-    align-items: center;
     align-content: center;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 100px;
     padding: 10px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.801);
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.logo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 550px;
+    width: 102%;
+}
+
+.usuario-logo {
+    padding-left: 500px;
+    width: 42%;
+}
+
+.tabela {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top:20px;
+    width: 100%;
+    height: 550px;
+}
+
+table {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-content: space-around;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: rgba(255, 255, 255, 0.801);
+    border-radius: 20px;
+    min-width: 700px;
+    max-width: 1800px;
+    min-height: 400px;
+    max-height: 800px;
+}
+
+.tabela-titulos {
+    font-family: 'Mukta', sans-serif;
+    font-size: 25px;
+}
+
+.usuarios-lista {
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+}
+
+.id-titulo {
+    display: flex;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.nome-titulo {
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.email-titulo {
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.id-usuario {
+    color: red;
+    padding-left: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.nome-usuario {
+    color: blue;
+    padding-left: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.email-usuario {
+    color: green;
+    padding-left: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.remover-botao {
+    font-family: 'Dongle', sans-serif;
+    font-size: 26px;
+    color: aliceblue;
+    cursor: pointer;
+    border-color: black;
+    width: 180px;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s linear;
+}
+
+.remover-botao:hover {
+    color: black;
+    transition: 0.2s linear;
+    scale: 1.02;
+    background-color: rgba(169, 255, 186, 1)
+}
+
+.editar-botao {
+    font-family: 'Dongle', sans-serif;
+    font-size: 26px;
+    color: aliceblue;
+    cursor: pointer;
+    border-color: black;
+    width: 180px;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s linear;
+    margin-right: 15px;
+}
+
+.editar-botao:hover {
+    color: black;
+    transition: 0.2s linear;
+    scale: 1.02;
+    background-color: rgba(169, 255, 186, 1)
+}
+
+.voltar-botao {
+    font-family: 'Dongle', sans-serif;
+    font-size: 32px;
+    color: aliceblue;
+    cursor: pointer;
+    margin-top: 20px;
+    border-color: black;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s linear;
+}
+
+.voltar-botao:hover {
+    color: black;
+    scale: 1.02;
+    transition: 0.2s linear;
+    background-color: rgba(169, 255, 186, 1)
 }

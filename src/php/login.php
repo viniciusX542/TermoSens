@@ -13,7 +13,7 @@
 <body>
     <header class="cabecalho">
         <a href="/"><img class="logo" src="/logo/icons8-termômetro-64.png" alt="Logo"></img></a>
-        <img src="/logo/icons8-usuário-67.png" alt="Usuario">
+        <img class="usuario-logo" src="/logo/icons8-usuário-67.png" alt="Usuario">
         <nav>
         </nav>
     </header>
@@ -31,7 +31,7 @@
                 </div>
             </form>
             <button class="login-botao">Entrar</button>
-            <button class="voltar-botao" onclick="location.href = document.referrer;">Voltar</button>
+            <a href="/"><button class="voltar-botao">Voltar</button></a>
         </fieldset>
     </section>
 </body>
