@@ -21,7 +21,7 @@
     <section class="conteudo-principal">
         <h1 class="conteudo-principal-titulo">Entre com sua conta</h1>
         <fieldset>
-            <form action="">
+            <form action="./adicionar.php" method="POST">
                 <div class="campo">
                     <td><input type="text" class="identificador-login" placeholder="Idenficiador" /></td>
                 </div>
