@@ -28,7 +28,6 @@
                 <div class="campo">
                     <td><input id="senha" type="password" class="senha-login" placeholder="Senha" /></td>
                 </div>
-                </div>
                 <button type="submit" class="login-botao">Entrar</button>
             </form>
             <a href="/"><button class="voltar-botao">Voltar</button></a>
