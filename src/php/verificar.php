@@ -18,7 +18,7 @@ if (!isset($_SESSION["auth"])or $_SESSION["auth"] !== true) {
 <body>
     <h1>Ja esta cadastrado</h1>
 
-    <button class="voltar-botao" onclick="location.href = document.referrer;">Voltar</button>
+  <a href="/"><button class="voltar-botao">Voltar</button></a>
     
 </body>
 </html>
