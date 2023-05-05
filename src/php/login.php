@@ -21,12 +21,12 @@
     <section class="conteudo-principal">
         <h1 class="conteudo-principal-titulo">Entre com sua conta</h1>
         <fieldset>
-            <form id="form" action= "./adicionar.php" method="POST">
+            <form id="form" action= "./entrar.php" method="POST">
                 <div class="campo">
-                    <td><input id ="identificador" type="text" class="identificador-login" placeholder="Idenficiador" /></td>
+                    <td><input id ="identificador" type="text" name="identificador" class="identificador-login" placeholder="Idenficiador" /></td>
                 </div>
                 <div class="campo">
-                    <td><input id="senha" type="password" class="senha-login" placeholder="Senha" /></td>
+                    <td><input id="senha" type="password" name="senha" class="senha-login" placeholder="Senha" /></td>
                 </div>
                 </div>
                 <button type="submit" class="login-botao">Entrar</button>
@@ -35,54 +35,6 @@
         </fieldset>
     </section>
     
-    <script>
-        const form = document.getElementById("form");
-        const senha = document.getElementById("senha");
-        const confirme = document.getElementById("confirme");
-        const ver = document.getElementById("identificador");
-
-        
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
-
-            var divMensagens = document.querySelector("#divMensagens");
-            divMensagens.textContent = ""
-
-            if (senha.value !== confirme.value) {
-                var msg = document.createElement("div");
-                msg.classList.add("alerta")
-                msg.classList.add("alerta-warning");
-                msg.textContent = "As senhas não coincidem";
-
-                var divMensagens = document.querySelector("#divMensagens");
-                divMensagens.appendChild(msg);
-            }
-            const test = new XMLHttpRequest();
-            test.onreadystatechange = function () {
-                var divMensagens1 = document.querySelector("#divMensagensID");
-                divMensagens1.textContent = "";
-
-                if (this.readyState === 4 && this.status === 200) {
-                    if (this.responseText == 'jaCadastrado') {
-                        var msg1 = document.createElement("div");
-                        msg1.classList.add("alerta")
-                        msg1.classList.add("alerta-warning");
-                        msg1.textContent = "Esse verificador já está cadastrado";
-
-                        var divMensagens1 = document.querySelector("#divMensagensID");
-                        divMensagens1.appendChild(msg1);
-
-                    } else {
-                        form.submit();
-                    }
-                }
-            }
-            const dados = new FormData();
-            dados.append('user', ver.value);
-            test.open('POST', './verificar.php', true);
-            test.send(dados);
-        });
-    </script>
 </body>
 
 </html>
