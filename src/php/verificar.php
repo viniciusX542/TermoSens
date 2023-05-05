@@ -17,10 +17,13 @@ if (!isset($_SESSION["auth"])or $_SESSION["auth"] !== true) {
 </head>
 <body>
     <h1>Ja esta cadastrado</h1>
+
+    <button class="voltar-botao" onclick="location.href = document.referrer;">Voltar</button>
+    
 </body>
 </html>
-<?php 
-   /* $user = $_POST['user'];
+<?
+   /*$user = $_POST['user'];
     $fp = fopen('usuarios.csv','r');
     while( ($linha = fgetcsv($fp)) !== false){
         if($linha[0] == $user){
