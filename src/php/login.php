@@ -21,13 +21,12 @@
     <section class="conteudo-principal">
         <h1 class="conteudo-principal-titulo">Entre com sua conta</h1>
         <fieldset>
-            <form action="./adicionar.php" method="POST">
+            <form action="./entrar.php" method="POST">
                 <div class="campo">
-                    <td><input type="text" class="identificador-login" placeholder="Idenficiador" /></td>
+                    <td><input type="text" class="identificador-login" placeholder="Idenficiador" name="identificador" require/></td>
                 </div>
                 <div class="campo">
-                    <td><input type="password" class="senha-login" placeholder="Senha" /></td>
-                </div>
+                    <td><input type="password" class="senha-login" placeholder="Senha" name="senha" require/></td>
                 </div>
             </form>
             <button class="login-botao">Entrar</button>

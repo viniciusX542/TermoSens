@@ -83,11 +83,14 @@ table {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background-color: rgba(255, 255, 255, 0.801);
     border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     min-width: 700px;
-    max-width: 1800px;
+    max-width: 2000px;
     min-height: 400px;
     max-height: 800px;
 }
+
 
 .tabela-titulos {
     font-family: 'Mukta', sans-serif;
@@ -99,9 +102,27 @@ table {
     font-size: 25px;
 }
 
-.id-titulo {
-    display: flex;
+.senha-titulo{
+    font-family: 'Mukta', sans-serif;
+    font-size: 25px;
     padding-left: 15px;
+    padding-bottom: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.tipo-titulo {
+    font-family: 'Mukta', sans-serif;
+    font-size: 25px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.id-titulo {
+    padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 15px;
     border: 1px solid black;
     border-collapse: collapse;
@@ -109,6 +130,7 @@ table {
 
 .nome-titulo {
     padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 15px;
     border: 1px solid black;
     border-collapse: collapse;
@@ -121,9 +143,18 @@ table {
     border-collapse: collapse;
 }
 
-.id-usuario {
+.tipo-usuario{
     color: red;
     padding-left: 15px;
+    margin-right: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.id-usuario {
+    color: rgb(12, 12, 12);
+    padding-left: 15px;
+    padding-right: 15px;
     border: 1px solid black;
     border-collapse: collapse;
 }
@@ -131,6 +162,7 @@ table {
 .nome-usuario {
     color: blue;
     padding-left: 15px;
+    padding-right: 15px;
     border: 1px solid black;
     border-collapse: collapse;
 }
@@ -138,6 +170,16 @@ table {
 .email-usuario {
     color: green;
     padding-left: 15px;
+    padding-right: 15px;
+
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.senha-usuario{
+    color: rgb(182, 133, 0);
+    padding-left: 15px;
+    padding-right: 15px;
     border: 1px solid black;
     border-collapse: collapse;
 }
@@ -171,7 +213,6 @@ table {
     height: 40px;
     background-color: rgb(0, 0, 0);
     transition: 0.2s linear;
-    margin-right: 15px;
 }
 
 .editar-botao:hover {

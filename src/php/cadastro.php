@@ -83,7 +83,7 @@
                         var msg1 = document.createElement("div");
                         msg1.classList.add("alerta")
                         msg1.classList.add("alerta-warning");
-                        msg1.textContent = "Esse verificador já está cadastrado";
+                        msg1.textContent = "Esse identificador já está cadastrado";
 
                         var divMensagens1 = document.querySelector("#divMensagensID");
                         divMensagens1.appendChild(msg1);

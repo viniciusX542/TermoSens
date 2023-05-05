@@ -59,7 +59,7 @@ body::-webkit-scrollbar-thumb {
 
 .usuario-logo {
     padding-left: 500px;
-    width: 42%;
+    width: 30%;
 }
 
 .conteudo-principal {
@@ -68,7 +68,7 @@ body::-webkit-scrollbar-thumb {
     align-content: center;
     justify-content: center;
     flex-flow: column wrap;
-    height: 560px;
+    height: 620px;
     width: 100%;
     gap: 10px;
 }
@@ -84,6 +84,10 @@ form {
     align-items: center;
     justify-content: center;
     align-content: center;
+    min-width: 390px;
+    max-width: 420px;
+    min-height: 390px;
+    max-height: 580px;
 }
 
 input {
@@ -152,8 +156,6 @@ fieldset {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background-color: rgba(255, 255, 255, 0.801);
     border-radius: 20px;
-    width: 390px;
-    height: 460px;
 }
 
 button {

@@ -1,4 +1,5 @@
-<?php 
+<?php
+    $tipo = $_POST['tipo'];
     $identificador = $_POST['identificador'];
     $nome = $_POST['nome'];
     $email = $_POST['email'];
@@ -9,8 +10,8 @@
     $temp = fopen($temName, 'w');
     $orig = fopen('usuarios.csv', 'r');
     while (($row = fgetcsv($orig)) !== false) {
-        if ($row[0] == $identificador) {
-            fputcsv($temp, [$identificador, $nome, $email, $senha]);
+        if ($row[1] == $identificador) {
+            fputcsv($temp, [$tipo, $identificador, $nome, $email, $senha]);
             continue;
         }
         fputcsv($temp, $row);
