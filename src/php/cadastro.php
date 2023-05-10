@@ -23,7 +23,7 @@
         <?php $fp = fopen('usuarios.csv', 'r') ?>
         <h1 class="conteudo-principal-titulo">Cadastre-se</h1>
         <fieldset>
-            <form id="form" action="./adicionar.php" method="POST">
+            <form id="form" action="./create.php" method="POST">
                 <td><input id="identificador" type="text" class="identificador-cad" name="identificador"
                         placeholder="Idenficiador" maxlength="15" min="15" required></td>
                 <div class="row">
