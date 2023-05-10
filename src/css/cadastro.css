@@ -145,15 +145,18 @@ input:valid {
 
 fieldset {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-flow: column wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     border: none;
+    padding-top: 25px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background-color: rgba(255, 255, 255, 0.801);
     border-radius: 20px;
     width: 390px;
-    height: 460px;
+    min-height: 420px;
+    max-height: 500px;
 }
 
 button {

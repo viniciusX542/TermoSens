@@ -1,12 +1,12 @@
 <?php
-$identificador = $_GET['identificador'];
+$email = $_GET['email'];
 
 $tempName = tempnam('.', '');
 
 $temp = fopen($tempName, 'w');
 $orig = fopen('usuarios.csv', 'r');
 while (($row = fgetcsv($orig)) !== false) {
-    if ($row[0] == $identificador) {
+    if ($row[1] == $email) {
         continue;
     }
     fputcsv($temp, $row);

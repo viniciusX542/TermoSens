@@ -21,25 +21,25 @@
         <div class="tabela">
             <table>
                 <tr class="tabela-titulos">
-                    <td class="id-titulo">ID</td>
                     <td class="nome-titulo">Nome</td>
                     <td class="email-titulo">Email</td>
+                    <td class="senha-titulo">Senha</td>
                 </tr>
                 
                 <?php $fp = fopen('usuarios.csv', 'r') ?>
                 <?php while (($row = fgetcsv($fp)) !== false) : ?>
                     <tr class="usuarios-lista">
-                        <td class="id-usuario"><?= $row[0] ?></td>
-                        <td class="nome-usuario"><?= $row[1] ?></td>
-                        <td class="email-usuario"><?= $row[2] ?></td>
+                        <td class="nome-usuario"><?= $row[0] ?></td>
+                        <td class="email-usuario"><?= $row[1] ?></td>
+                        <td class="senha-usuario"><?= $row[2] ?></td>
                         <td>
                             <form id="delete-form" action="delete.php" method="GET">
-                                <input type="hidden" name="identificador" value="<?= $row[0] ?>">
+                                <input type="hidden" name="email" value="<?= $row[1] ?>">
                                 <button class="remover-botao">Remover</button>
                             </form>
                         </td>
                         <td>
-                            <a href="editar.php?identificador=<?= $row[0] ?>"><button class="editar-botao">Editar</button></a>
+                            <a href="editar.php?email=<?= $row[1] ?>"><button class="editar-botao">Editar</button></a>
                         </td>
                     </tr>
                 <?php endwhile ?>

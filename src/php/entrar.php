@@ -5,46 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="../css/entrar.css">
     <link rel="icon" href="/logo/icons8-termômetro-64.png">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <title>Cadastro</title>
+    <title>Entrar</title>
 </head>
 
 <body>
     <header class="cabecalho">
-        <a href="/"><img class="logo" src="/logo/icons8-termômetro-64.png" alt="Logo"></a>
-        <img src="/logo/icons8-usuário-67.png" alt="Usuario">
+        <a href="/"><img class="logo" src="/logo/icons8-termômetro-64.png" alt="Logo"></img></a>
+        <img class="usuario-logo" src="/logo/icons8-usuário-67.png" alt="Usuario">
         <nav>
         </nav>
     </header>
 
     <section class="conteudo-principal">
-        <?php $fp = fopen('usuarios.csv', 'r') ?>
-        <h1 class="conteudo-principal-titulo">Cadastre-se</h1>
+        <h1 class="conteudo-principal-titulo">Entre com sua conta</h1>
         <fieldset>
-            <form id="form" action="./create.php" method="POST">
-                <td><input id="nome" type="text" class="nome-cad" name="nome" placeholder="Nome Completo" maxlength="50"
-                min="20" required></td>
-                <td><input id="email" type="email" class="email-cad" name="email" placeholder="Email" maxlength="25"
-                required></td>
-                <div class="row">
-                    <div class="col-12 col-s-12" id="divMensagensID">
-                        <div class="alerta alerta-warning"></div>
-                    </div>
+            <?php $fp = fopen('usuarios.csv', 'r') ?>
+            <form id="form" action="./session.php" method="POST">
+                <div class="campo">
+                    <td><input id="email" type="text" name="email" class="email-login" placeholder="Idenficiador" required /></td>
                 </div>
-                <td><input id="senha" type="password" class="senha-cad" name="senha" placeholder="Senha" maxlength="20"
-                        minlength="8" required></td>
-                <td><input id="confirme" type="password" class="confirm-senha-cad" name="confirmSenha"
-                        placeholder="Confirmar Senha" maxlength="20" minlength="8" required></td>
-                <div class="row">
-                    <div class="col-12 col-s-12" id="divMensagens">
-                        <div class="alerta alerta-warning"></div>
-                    </div>
+                <div class="campo">
+                    <td><input id="senha" type="password" name="senha" class="senha-login" placeholder="Senha" required /></td>
                 </div>
-                <button type="submit" class="enviar-botao">Enviar</button>
-                <button class="voltar-botao" onclick="location.href = document.referrer;">Voltar</button>
+                <button type="submit" class="login-botao">Entrar</button>
             </form>
+            <a href="/"><button class="voltar-botao">Voltar</button></a>
         </fieldset>
     </section>
 
@@ -52,9 +39,9 @@
         const form = document.getElementById("form");
         const senha = document.getElementById("senha");
         const confirme = document.getElementById("confirme");
-        const ver = document.getElementById("email");
+        const ver = document.getElementById("identificador");
 
-        
+
         form.addEventListener('submit', (event) => {
             event.preventDefault();
 
@@ -71,7 +58,7 @@
                 divMensagens.appendChild(msg);
             }
             const test = new XMLHttpRequest();
-            test.onreadystatechange = function () {
+            test.onreadystatechange = function() {
                 var divMensagens1 = document.querySelector("#divMensagensID");
                 divMensagens1.textContent = "";
 
@@ -80,7 +67,7 @@
                         var msg1 = document.createElement("div");
                         msg1.classList.add("alerta")
                         msg1.classList.add("alerta-warning");
-                        msg1.textContent = "Esse Email já está cadastrado";
+                        msg1.textContent = "Esse verificador já está cadastrado";
 
                         var divMensagens1 = document.querySelector("#divMensagensID");
                         divMensagens1.appendChild(msg1);
@@ -92,11 +79,10 @@
             }
             const dados = new FormData();
             dados.append('user', ver.value);
-            test.open('POST', './verification.php', true);
+            test.open('POST', './verificar.php', true);
             test.send(dados);
         });
     </script>
-
 </body>
 
 </html>

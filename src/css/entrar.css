@@ -83,8 +83,16 @@ body::-webkit-scrollbar-thumb {
     gap: 12px;
 }
 
-.identificador-login {
+.email-login {
     margin-top: 50px;
+}
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 input {

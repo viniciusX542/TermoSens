@@ -1,6 +1,5 @@
 <?php
 
-$identificador = $_POST['identificador'];
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
@@ -17,7 +16,7 @@ while (($row = fgetcsv($fp)) !== false); {
 }
 
 $fp = fopen('usuarios.csv', 'a');
-fputcsv($fp, [$identificador, $nome, $email, $senha]);
+fputcsv($fp, [$nome, $email, $senha]);
 
 http_response_code(302);
 header('location: /');
