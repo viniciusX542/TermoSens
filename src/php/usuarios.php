@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/usuarios.css">
+    <link rel="icon" href="/logo/icons8-termômetro-64.png">
     <title>Usuarios</title>
 </head>
 
@@ -21,6 +22,7 @@
         <div class="tabela">
             <table>
                 <tr class="tabela-titulos">
+                    <td class="id-titulo">Identificador</td>
                     <td class="nome-titulo">Nome</td>
                     <td class="email-titulo">Email</td>
                     <td class="senha-titulo">Senha</td>
@@ -29,17 +31,18 @@
                 <?php $fp = fopen('usuarios.csv', 'r') ?>
                 <?php while (($row = fgetcsv($fp)) !== false) : ?>
                     <tr class="usuarios-lista">
-                        <td class="nome-usuario"><?= $row[0] ?></td>
-                        <td class="email-usuario"><?= $row[1] ?></td>
-                        <td class="senha-usuario"><?= $row[2] ?></td>
+                        <td class="id-usuario"><?= $row[0] ?></td>
+                        <td class="nome-usuario"><?= $row[1] ?></td>
+                        <td class="email-usuario"><?= $row[2] ?></td>
+                        <td class="senha-usuario"><?= $row[3] ?></td>
                         <td>
                             <form id="delete-form" action="delete.php" method="GET">
-                                <input type="hidden" name="email" value="<?= $row[1] ?>">
+                                <input type="hidden" name="email" value="<?= $row[2] ?>">
                                 <button class="remover-botao">Remover</button>
                             </form>
                         </td>
                         <td>
-                            <a href="editar.php?email=<?= $row[1] ?>"><button class="editar-botao">Editar</button></a>
+                            <a href="editar.php?email=<?= $row[2] ?>"><button class="editar-botao">Editar</button></a>
                         </td>
                     </tr>
                 <?php endwhile ?>

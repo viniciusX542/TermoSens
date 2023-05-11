@@ -102,6 +102,7 @@ table {
 .id-titulo {
     display: flex;
     padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 15px;
     border: 1px solid black;
     border-collapse: collapse;
@@ -110,12 +111,22 @@ table {
 .nome-titulo {
     padding-left: 15px;
     padding-bottom: 15px;
+    padding-right: 15px;
     border: 1px solid black;
     border-collapse: collapse;
 }
 
 .email-titulo {
     padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.senha-titulo {
+    padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 15px;
     border: 1px solid black;
     border-collapse: collapse;
@@ -124,6 +135,7 @@ table {
 .id-usuario {
     color: red;
     padding-left: 15px;
+    padding-right: 15px;
     border: 1px solid black;
     border-collapse: collapse;
 }
@@ -131,6 +143,7 @@ table {
 .nome-usuario {
     color: blue;
     padding-left: 15px;
+    padding-right: 15px;
     border: 1px solid black;
     border-collapse: collapse;
 }
@@ -138,6 +151,15 @@ table {
 .email-usuario {
     color: green;
     padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.senha-usuario {
+    color: rgb(255, 132, 50);
+    padding-left: 15px;
+    padding-right: 15px;
     border: 1px solid black;
     border-collapse: collapse;
 }

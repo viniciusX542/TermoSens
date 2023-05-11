@@ -8,7 +8,7 @@ $confirmSenha = $_POST['confirmSenha'];
 
 $fp = fopen('usuarios.csv', 'r');
 while (($row = fgetcsv($fp)) !== false); {
-    if ($row[1] == $email) {
+    if ($row[2] == $email) {
         http_response_code(400);
         echo "Email já cadastrado";
         exit();

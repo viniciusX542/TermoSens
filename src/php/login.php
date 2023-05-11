@@ -5,7 +5,7 @@ $senha = $_POST['senha'];
 $userFile = fopen("usuarios.csv", 'r');
 
 while( ($linha = fgetcsv($userFile)) !== false){
-    if($linha[1] == $email && $senha == $linha[2]){
+    if($linha[2] == $email && $senha == $linha[3]){
         http_response_code(202);
         session_start();
         $_SESSION['auth'] = true;
