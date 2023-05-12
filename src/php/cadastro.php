@@ -95,7 +95,7 @@
             }
             const dados = new FormData();
             dados.append('user', ver.value);
-            test.open('POST', './verificar.php', true);
+            test.open('POST', './verification.php', true);
             test.send(dados);
         });
     </script>
