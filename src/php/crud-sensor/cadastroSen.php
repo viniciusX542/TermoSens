@@ -31,7 +31,7 @@
                         <div class="alerta alerta-warning"></div>
                     </div>
                 </div>
-                <td><input id="nome" type="text" class="nome-cad" name="nome" placeholder="Nome Completo" maxlength="50"
+                <td><input id="nome" type="text" class="nome-cad" name="nome" placeholder="Nome do Sensor" maxlength="50"
                         min="20" required></td>
                 <button type="submit" class="enviar-botao">Enviar</button>
             </form>
