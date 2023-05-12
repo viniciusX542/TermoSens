@@ -21,7 +21,7 @@
     <section class="conteudo-principal">
         <h1 class="conteudo-principal-titulo">Entre com sua conta</h1>
         <fieldset>
-            <form action="./session.php" method="POST">
+            <form action="./crud-sensor/session.php" method="POST">
                 <div class="campo">
                     <td><input type="text" class="identificador-login" placeholder="Email" name="email" require/></td>
                 </div>
