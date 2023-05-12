@@ -16,5 +16,5 @@ fclose($orig);
 
 rename($tempName, 'sensores.csv');
 
-header('location: cadastroSen.php');
+header('location: listaSen.php');
 ?>

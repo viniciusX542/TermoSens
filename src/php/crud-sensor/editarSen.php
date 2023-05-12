@@ -38,9 +38,8 @@ if (sizeof($data) == 0) {
     </section>
     <section>
         <form id="form" action="./update.php" method="POST">
-            <td><input id="tipo" type="text" class="tipo-cad" name="tipo" placeholder="tipo" maxlength="15" min="15" value="<?= $data[0] ?>"></td>
-            <td><input id="identificador" type="text" class="identificador-cad" name="identificador" placeholder="Idenficiador" maxlength="15" min="15" value="<?= $data[1] ?>"></td>
-            <td><input id="nome" type="text" class="nome-cad" name="nome" placeholder="Nome Completo" maxlength="50" min="20" value="<?= $data[2] ?>"></td>
+            <td><input id="identificador" type="text" class="identificador-cad" name="identificador" placeholder="Idenficiador" maxlength="15" min="15" value="<?= $data[0] ?>"></td>
+            <td><input id="nome" type="text" class="nome-cad" name="nome" placeholder="Nome Completo" maxlength="50" min="20" value="<?= $data[1] ?>"></td>
             <button type="submit" class="enviar-botao">Enviar</button>
             <a href="./cadastroSen.php" ><button class="voltar-botao">Voltar</button></a>
         </form>

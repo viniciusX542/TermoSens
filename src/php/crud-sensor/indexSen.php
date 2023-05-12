@@ -23,8 +23,8 @@
         <div class="conteudo-principal-botoes">
             <a href="../crud-sensor/listaSen.php"><button class="login-botao">Sensores</button></a>
             <a href="../crud-sensor/cadastroSen.php"><button class="cadastro-botao">Cadastre um Sensor</button></a>
-            <h1 class="conteudo-principal-texto">Não possui uma conta?<a href="/src/php/cadastro.php" class="cadastro-texto">Cadastre-se.</a></h1>
         </div>
+        <button class="voltar-botao" onclick="location.href = document.referrer;">Sair da conta</button>
     </section>
 </body>
 

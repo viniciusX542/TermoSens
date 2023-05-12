@@ -31,7 +31,7 @@
                 <?php while (($row = fgetcsv($fp)) !== false) : ?>
                     <tr class="usuarios-lista">
                         <td class="id-usuario"><?= $row[0]?></td>
-                        <td class="npme-usuario"><?= $row[1] ?></td>
+                        <td class="nome-usuario"><?= $row[1] ?></td>
                         <td>
                             <form id="delete-form" action="delete.php" method="GET">
                                 <input type="hidden" name="identificador" value="<?= $row[0] ?>">
@@ -39,7 +39,7 @@
                             </form>
                         </td>
                         <td>
-                            <a href="editar.php?identificador=<?= $row[0] ?>"><button class="editar-botao">Editar</button></a>
+                            <a href="editarSen.php?identificador=<?= $row[0] ?>"><button class="editar-botao">Editar</button></a>
                         </td>
                     </tr>
                 <?php endwhile ?>
