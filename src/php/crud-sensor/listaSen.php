@@ -44,7 +44,7 @@
                     </tr>
                 <?php endwhile ?>
             </table>
-            <button class="voltar-botao" onclick="location.href = document.referrer;">Voltar</button>
+            <input class="voltar-botao" id="voltar" action="action" type="button" value="Voltar" onclick="window.history.go(-1); return false;">
         </div>
 
         <script>

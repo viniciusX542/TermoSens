@@ -3,7 +3,7 @@
 if($_SERVER['REQUEST_METHOD'] != 'POST'){
     exit();
 }
-    $fp = fopen('../usuarios.csv','r');
+    $fp = fopen('../crud-user/usuarios.csv','r');
 
     while(($row = fgetcsv($fp)) !== false){
         if($row[3] ==$_POST['email'] && $row[4] == $_POST['senha']){

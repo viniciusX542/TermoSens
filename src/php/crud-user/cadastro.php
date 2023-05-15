@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="/src/css/cadastro.css">
     <link rel="icon" href="/logo/icons8-termômetro-64.png">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Cadastro</title>

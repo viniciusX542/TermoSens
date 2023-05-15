@@ -41,7 +41,7 @@ if (sizeof($data) == 0) {
             <td><input id="identificador" type="text" class="identificador-cad" name="identificador" placeholder="Idenficiador" maxlength="15" min="15" value="<?= $data[0] ?>"></td>
             <td><input id="nome" type="text" class="nome-cad" name="nome" placeholder="Nome Completo" maxlength="50" min="20" value="<?= $data[1] ?>"></td>
             <button type="submit" class="enviar-botao">Enviar</button>
-            <a href="./cadastroSen.php" ><button class="voltar-botao">Voltar</button></a>
+            <input class="voltar-botao" id="voltar" action="action" type="button" value="Voltar" onclick="window.history.go(-1); return false;">
         </form>
     </section>
 </body>

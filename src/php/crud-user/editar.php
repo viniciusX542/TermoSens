@@ -1,15 +1,15 @@
 <?php
-$identificador = $_GET['identificador'];
+$nome = $_GET['nome'];
 $fp = fopen('usuarios.csv', 'r');
 $data = [];
 
 while (($row = fgetcsv($fp)) !== false) {
-    if ($row[0] == $identificador) {
+    if ($row[2] == $nome) {
         $data = $row;
         break;
     }
 }
-if (sizeof($data) == 0) {
+if (sizeof($data) == 2) {
     header('location: usuarios.php');
     exit();
 }
@@ -34,7 +34,7 @@ if (sizeof($data) == 0) {
         </nav>
     </header>
     <section>
-        <h1>Dados do identificador: <?= $identificador ?></h1>
+        <h1>Dados do identificador: <?= $nome ?></h1>
     </section>
     <section>
         <form id="form" action="./update.php" method="POST">

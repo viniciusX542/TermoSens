@@ -32,8 +32,8 @@
                 </div>
                 <td><input id="nome" type="text" class="nome-cad" name="nome" placeholder="Nome do Sensor" required></td>
                 <button type="submit" class="enviar-botao">Enviar</button>
+                <input class="voltar-botao" id="voltar" action="action" type="button" value="Voltar" onclick="window.history.go(-1); return false;">
             </form>
-            <button class="voltar-botao" onclick="location.href = document.referrer;">Voltar</button>
         </fieldset>
 
     </section>

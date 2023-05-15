@@ -40,12 +40,12 @@
                         <td class="senha-usuario"><?= $row[4] ?></td>
                         <td>
                             <form id="delete-form" action="delete.php" method="GET">
-                                <input type="hidden" name="identificador" value="<?= $row[0] ?>">
+                                <input type="hidden" name="identificador" value="<?= $row[1] ?>">
                                 <button class="remover-botao">Remover</button>
                             </form>
                         </td>
                         <td>
-                            <a href="editar.php?identificador=<?= $row[0] ?>"><button class="editar-botao">Editar</button></a>
+                            <a href="editar.php?nome=<?= $row[2] ?>"><button class="editar-botao">Editar</button></a>
                         </td>
                     </tr>
                 <?php endwhile ?>

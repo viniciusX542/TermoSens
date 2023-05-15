@@ -1,3 +1,13 @@
+<?php 
+    session_start();
+    if(isset($_SESSION['auth'])){
+        header('location: /src/php/crud-sensor/indexSen.php');
+        exit();
+    }else{
+        session_destroy();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,9 +31,9 @@
 
     <section class="conteudo-principal">
         <div class="conteudo-principal-botoes">
-            <a href="./src/php/entrar.php"><button class="login-botao">Entrar</button></a>
-            <a href="./src/php/cadastro.php"><button class="cadastro-botao">Cadastro</button></a>
-            <h1 class="conteudo-principal-texto">Não possui uma conta?<a href="/src/php/cadastro.php" class="cadastro-texto">Cadastre-se.</a></h1>
+            <a href="./src/php/crud-user/entrar.php"><button class="login-botao">Entrar</button></a>
+            <a href="./src/php/crud-user/cadastro.php"><button class="cadastro-botao">Cadastro</button></a>
+            <h1 class="conteudo-principal-texto">Não possui uma conta?<a href="/src/php/crud-user/cadastro.php" class="cadastro-texto">Cadastre-se.</a></h1>
         </div>
     </section>
 </body>

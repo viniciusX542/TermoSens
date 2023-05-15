@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="/src/css/login.css">
     <link rel="icon" href="/logo/icons8-termômetro-64.png">
     <title>Entrar</title>
 </head>
@@ -21,7 +21,7 @@
     <section class="conteudo-principal">
         <h1 class="conteudo-principal-titulo">Entre com sua conta</h1>
         <fieldset>
-            <form action="./session/login.php" method="POST">
+            <form action="../session/login.php" method="POST">
                 <input class="input" type="text" class="identificador-login" placeholder="Email" name="email" require />
                 <input class="input" type="password" class="senha-login" placeholder="Senha" name="senha" require />
                 <button type="submit" class="login-botao">Entrar</button>
