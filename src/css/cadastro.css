@@ -86,11 +86,11 @@ form {
     align-content: center;
     min-width: 390px;
     max-width: 420px;
-    min-height: 390px;
+    min-height: 490px;
     max-height: 580px;
 }
 
-input {
+.input {
     font-family: 'Dongle', sans-serif;
     font-size: 26px;
     color: rgb(0, 0, 0);
@@ -105,7 +105,7 @@ input {
     text-align: center;
 }
 
-input:focus {
+.input:focus {
     border-left: 10px solid rgba(169, 255, 186, 1) !important;
     border-top: none;
     border-right: none;
@@ -117,7 +117,7 @@ input:focus {
     padding-left: 5px;
 }
 
-input:invalid {
+.input:invalid {
     border-left: 10px solid rgb(255, 6, 6);
     border-top: none;
     border-right: none;
@@ -125,7 +125,7 @@ input:invalid {
     width: 300px;
 }
 
-input:valid {
+.input:valid {
     border-left: 10px solid rgba(169, 255, 186, 1);
     border-top: none;
     border-right: none;
@@ -160,10 +160,11 @@ fieldset {
 
 button {
     font-family: 'Dongle', sans-serif;
-    cursor: pointer;
-    margin-bottom: 15px;
     font-size: 32px;
+    margin-top: 20px;
+    cursor: pointer;
     color: aliceblue;
+    border-color: black;
     width: 300px;
     height: 50px;
     background-color: rgb(0, 0, 0);
@@ -179,4 +180,24 @@ button:hover {
 
 .enviar-botao {
     margin-top: 20px;
+}
+
+.voltar-botao {
+    font-family: 'Dongle', sans-serif;
+    font-size: 32px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: aliceblue;
+    border-color: black;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s linear;
+}
+
+.voltar-botao:hover {
+    color: black;
+    scale: 1.02;
+    transition: 0.2s linear;
+    background-color: rgba(169, 255, 186, 1)
 }

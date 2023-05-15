@@ -24,32 +24,33 @@
         <h1 class="conteudo-principal-titulo">Cadastre-se</h1>
         <fieldset>
             <form id="form" action="./adicionar.php" method="POST">
-                <td><input id="identificador" type="text" class="identificador-cad" name="identificador"
-                        placeholder="Idenficiador" maxlength="15" min="15" required></td>
+                <td><input class="input" id="identificador" type="text" class="identificador-cad" name="identificador" placeholder="Idenficiador" maxlength="15" min="15" required></td>
                 <div class="row">
                     <div class="col-12 col-s-12" id="divMensagensID">
                         <div class="alerta alerta-warning"></div>
                     </div>
                 </div>
-                <td><input id="nome" type="text" class="nome-cad" name="nome" placeholder="Nome Completo" maxlength="50"
-                        min="20" required></td>
-                <td><input id="email" type="email" class="email-cad" name="email" placeholder="Email" maxlength="25"
-                        required></td>
-                <td><input id="senha" type="password" class="senha-cad" name="senha" placeholder="Senha" maxlength="20"
-                        minlength="8" required></td>
-                <td><input id="confirme" type="password" class="confirm-senha-cad" name="confirmSenha"
-                        placeholder="Confirmar Senha" maxlength="20" minlength="8" required></td>
+                <td><input class="input" id="nome" type="text" class="nome-cad" name="nome" placeholder="Nome Completo" maxlength="50" min="20" required></td>
+                <td><input class="input" id="email" type="email" class="email-cad" name="email" placeholder="Email" maxlength="25" required></td>
+                <td><input class="input" id="senha" type="password" class="senha-cad" name="senha" placeholder="Senha" maxlength="20" minlength="8" required></td>
+                <td><input class="input" id="confirme" type="password" class="confirm-senha-cad" name="confirmSenha" placeholder="Confirmar Senha" maxlength="20" minlength="8" required></td>
                 <div class="row">
                     <div class="col-12 col-s-12" id="divMensagens">
                         <div class="alerta alerta-warning"></div>
                     </div>
                 </div>
                 <button type="submit" class="enviar-botao">Enviar</button>
+                <input class="voltar-botao" action="action" type="button" value="Voltar" onclick="window.history.go(-1); return false;">
             </form>
-           <a href="/"><button class="voltar-botao">Voltar</button></a>
         </fieldset>
 
     </section>
+
+    <script>
+        function goBack() {
+            window.history.back()
+        }
+    </script>
 
     <script>
         const form = document.getElementById("form");
@@ -57,7 +58,7 @@
         const confirme = document.getElementById("confirme");
         const ver = document.getElementById("identificador");
 
-        
+
         form.addEventListener('submit', (event) => {
             event.preventDefault();
 
@@ -74,7 +75,7 @@
                 divMensagens.appendChild(msg);
             }
             const test = new XMLHttpRequest();
-            test.onreadystatechange = function () {
+            test.onreadystatechange = function() {
                 var divMensagens1 = document.querySelector("#divMensagensID");
                 divMensagens1.textContent = "";
 

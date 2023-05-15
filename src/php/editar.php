@@ -45,7 +45,7 @@ if (sizeof($data) == 0) {
             <td><input id="senha" type="password" class="senha-cad" name="senha" placeholder="Senha" maxlength="20" minlength="8" value="<?= $data[4] ?>"></td>
             <td><input id="confirme" type="password" class="confirm-senha-cad" name="confirmSenha" placeholder="Confirmar Senha" maxlength="20" minlength="8" value="<?= $data[5] ?>"></td>
             <button type="submit" class="enviar-botao">Enviar</button>
-            <a href="./usuarios.php" ><button class="voltar-botao">Voltar</button></a>
+            <input class="voltar-botao" action="action" type="button" value="Voltar" onclick="window.history.go(-1); return false;">
         </form>
     </section>
 </body>

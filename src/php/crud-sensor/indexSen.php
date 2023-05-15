@@ -1,3 +1,11 @@
+<?php 
+    /* require('../session/verifSession.php');
+    if($_SESSION['auth']){
+        require("../session/session.php");
+        $_SESSION['autht'] = false;
+    } */
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -24,7 +32,7 @@
             <a href="../crud-sensor/listaSen.php"><button class="login-botao">Sensores</button></a>
             <a href="../crud-sensor/cadastroSen.php"><button class="cadastro-botao">Cadastre um Sensor</button></a>
         </div>
-        <button class="voltar-botao" onclick="location.href = document.referrer;">Sair da conta</button>
+        <button class="voltar-botao" onclick="location.href = '../session/exit.php' ">Sair da conta</button>
     </section>
 </body>
 

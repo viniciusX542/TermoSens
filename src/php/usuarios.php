@@ -57,6 +57,7 @@
             Array.from(document.querySelectorAll('.delete-form')).forEach(form => {
                 form.addEventListener('submit', (e) => {
                     if (!confirm("Tem certeza que deseja excluir este usuario?")) e.preventDefault()
+                    alert("Tem certeza que deseja excluir este usuario?")
                 })
             })
         </script>
