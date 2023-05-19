@@ -48,14 +48,6 @@
             </table>
             <input class="voltar-botao" id="voltar" action="action" type="button" value="Voltar" onclick="window.history.go(-1); return false;">
         </div>
-
-        <script>
-            Array.from(document.querySelectorAll('.delete-form')).forEach(form => {
-                form.addEventListener('submit', (e) => {
-                    if (!confirm("Tem certeza que deseja excluir este usuario?")) e.preventDefault()
-                })
-            })
-        </script>
     </section>
     <!--     <button class="voltar-botao" onclick="location.href = document.referrer;">Voltar</button>
  -->

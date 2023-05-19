@@ -28,6 +28,7 @@
     <section class="conteudo-principal">
         <div class="conteudo-principal-botoes">
             <a href="../crud-sensor/listaSen.php"><button class="login-botao">Sensores</button></a>
+            <a href="../crud-medidor/graficoHis.php"><button class="grafico-botao">Gráficos</button></a>
             <a href="../crud-sensor/cadastroSen.php"><button class="cadastro-botao">Cadastre um Sensor</button></a>
         </div>
         <button class="voltar-botao" onclick="location.href = '../session/exit.php' ">Sair da conta</button>

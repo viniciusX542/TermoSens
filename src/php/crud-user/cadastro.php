@@ -26,13 +26,13 @@
             <form id="form" action="./adicionar.php" method="POST">
                 <label>Nome:</label>
                 <input class="input" id="nome" type="text" class="nome-cad" name="nome" placeholder="Exemplo: Carlos Eduardo Da Silva" maxlength="50" min="20" required>
+                <label for="email">Email</label>
+                <input class="input" id="email" type="email" class="email-cad" name="email" placeholder="Exemplo: carlos@email.com" maxlength="25" required>
                 <div class="row">
                     <div class="col-12 col-s-12" id="divMensagensID">
                         <div class="alerta alerta-warning"></div>
                     </div>
                     </div>
-                    <label for="email">Email</label>
-                <input class="input" id="email" type="email" class="email-cad" name="email" placeholder="Exemplo: carlos@email.com" maxlength="25" required>
                 <label for="senha">Senha</label>
                 <input class="input" id="senha" type="password" class="senha-cad" name="senha" placeholder="Senha deve conter 8 carácter ou mais" maxlength="20" minlength="8" required>
                 <input class="input" id="confirme" type="password" class="confirm-senha-cad" name="confirmSenha" placeholder="Confirmar Senha" maxlength="20" minlength="8" required>
@@ -58,7 +58,7 @@
         const form = document.getElementById("form");
         const senha = document.getElementById("senha");
         const confirme = document.getElementById("confirme");
-        const ver = document.getElementById("identificador");
+        const ver = document.getElementById("email");
 
 
         form.addEventListener('submit', (event) => {
@@ -86,7 +86,7 @@
                         var msg1 = document.createElement("div");
                         msg1.classList.add("alerta")
                         msg1.classList.add("alerta-warning");
-                        msg1.textContent = "Esse identificador já está cadastrado";
+                        msg1.textContent = "Esse Email já está cadastrado";
 
                         var divMensagens1 = document.querySelector("#divMensagensID");
                         divMensagens1.appendChild(msg1);

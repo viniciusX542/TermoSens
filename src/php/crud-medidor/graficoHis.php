@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gráfico</title>
 
     <?php
     $RegistroDeTemperatura = [-2,-1,0,1,2]
@@ -15,7 +15,7 @@
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
+      function drawChart() {  
         var data = google.visualization.arrayToDataTable([
           ['horas', 'temperatura'],
           ['13:20',<?= $RegistroDeTemperatura[-2] ?>],
@@ -37,11 +37,8 @@
       }
     </script>
 
-
-
-
 </head>
 <body>
-    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+    <div id="curve_chart" style="width: 1500px; height: 800px"></div>
 </body>
 </html>

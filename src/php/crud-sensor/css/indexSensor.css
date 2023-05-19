@@ -78,8 +78,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 button {
-    font-family: 'Dongle', sans-serif;
-    font-size: 32px;
+    font-family: 'Mukta', sans-serif;
+    font-size: 22px;
     margin-top: 20px;
     cursor: pointer;
     color: aliceblue;
