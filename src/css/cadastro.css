@@ -86,13 +86,13 @@ form {
     align-content: center;
     min-width: 390px;
     max-width: 420px;
-    min-height: 490px;
+    min-height: 520px;
     max-height: 580px;
 }
 
 .input {
-    font-family: 'Dongle', sans-serif;
-    font-size: 26px;
+    font-family: 'Mukta', sans-serif;
+    font-size: 16px;
     color: rgb(0, 0, 0);
     margin: 5px;
     border-right: none;
@@ -102,7 +102,6 @@ form {
     height: 45px;
     background-color: transparent;
     transition: 0.20s;
-    text-align: center;
 }
 
 .input:focus {
@@ -131,6 +130,13 @@ form {
     border-right: none;
     outline: 2px solid;
     width: 300px;
+}
+
+label {
+    display: flex;
+    align-self: flex-start;
+    font-size: 25px;
+    font-family: 'Dongle', sans-serif;
 }
 
 .alerta {

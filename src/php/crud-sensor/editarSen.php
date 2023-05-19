@@ -22,12 +22,13 @@ if (sizeof($data) == 0) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/css/editar.css">
+    <link rel="stylesheet" href="./css/editarSensor.css">
     <title>Editar</title>
 </head>
 
 <body>
     <header class="cabecalho">
+        <h1 class="cabecalho-titulo">TermoSens</h1>
         <a href="/"><img class="logo" src="/logo/icons8-termômetro-64.png" alt="Logo"></img></a>
         <img class="usuario-logo" src="/logo/icons8-usuário-67.png" alt="Usuario">
         <nav>

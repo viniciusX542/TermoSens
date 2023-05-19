@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 100%;
+    background: rgb(195, 195, 195);
+    background: linear-gradient(6deg, rgba(195, 195, 195, 1) 0%, rgba(182, 182, 182, 1) 36%, rgba(169, 255, 186, 1) 100%);
+    /* Barra de rolagm no Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 0, 0) rgb(0, 0, 0);
+}
+
+
+/* Barra de rolagem no Chrome, Edge e Safari */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(195, 195, 195);
+    background: linear-gradient(90deg, rgba(195, 195, 195, 1) 0%, rgba(182, 182, 182, 1) 36%, rgba(169, 255, 186, 1) 100%);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Mukta', sans-serif;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.801);
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.cabecalho-titulo {
+    font-size: 25px;
+}
+
+.logo {
+    cursor: pointer;
+    width: 75px;
+}
+
+.usuario-logo {
+    width: 75px;
+}
+
+.conteudo-principal {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    height: 650px;
+    width: 100%;
+    gap: 10px;
+}
+
+.conteudo-principal-titulo {
+    font-family: 'Mukta', sans-serif;
+    font-size: 35px;
+}
+
+
+.tabela {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top:20px;
+    width: 100%;
+    height: 550px;
+}
+
+table {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-content: space-around;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: rgba(255, 255, 255, 0.801);
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 700px;
+    max-width: 2000px;
+    min-height: 200px;
+    max-height: 800px;
+}
+
+
+.tabela-titulos {
+    font-family: 'Mukta', sans-serif;
+    font-size: 25px;
+}
+
+.usuarios-lista {
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+}
+
+.senha-titulo{
+    font-family: 'Mukta', sans-serif;
+    font-size: 25px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.tipo-titulo {
+    font-family: 'Mukta', sans-serif;
+    font-size: 25px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.id-titulo {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.nome-titulo {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.email-titulo {
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.tipo-usuario{
+    color: red;
+    padding-left: 15px;
+    margin-right: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.id-usuario {
+    color: rgb(12, 12, 12);
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.nome-usuario {
+    color: blue;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.email-usuario {
+    color: green;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.senha-usuario{
+    color: rgb(182, 133, 0);
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.remover-botao {
+    font-family: 'Dongle', sans-serif;
+    font-size: 26px;
+    color: aliceblue;
+    cursor: pointer;
+    border-color: black;
+    width: 180px;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s linear;
+}
+
+.remover-botao:hover {
+    color: black;
+    transition: 0.2s linear;
+    scale: 1.02;
+    background-color: rgba(169, 255, 186, 1)
+}
+
+.editar-botao {
+    font-family: 'Dongle', sans-serif;
+    font-size: 26px;
+    color: aliceblue;
+    cursor: pointer;
+    border-color: black;
+    width: 180px;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s linear;
+}
+
+.editar-botao:hover {
+    color: black;
+    transition: 0.2s linear;
+    scale: 1.02;
+    background-color: rgba(169, 255, 186, 1)
+}
+
+.voltar-botao {
+    font-family: 'Dongle', sans-serif;
+    font-size: 32px;
+    color: aliceblue;
+    cursor: pointer;
+    margin-top: 20px;
+    border-color: black;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s linear;
+}
+
+.voltar-botao:hover {
+    color: black;
+    scale: 1.02;
+    transition: 0.2s linear;
+    background-color: rgba(169, 255, 186, 1)
+}

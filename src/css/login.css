@@ -88,8 +88,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .input {
-    font-family: 'Dongle', sans-serif;
-    font-size: 26px;
+    font-family: 'Mukta', sans-serif;
+    font-size: 16px;
     color: rgb(0, 0, 0);
     margin: 5px;
     border-right: none;
@@ -99,7 +99,6 @@ body::-webkit-scrollbar-thumb {
     height: 45px;
     background-color: transparent;
     transition: 0.20s;
-    text-align: center;
 }
 
 .input:focus {
@@ -114,6 +113,13 @@ body::-webkit-scrollbar-thumb {
     padding-left: 5px;
 }
 
+label {
+    display: flex;
+    align-self: flex-start;
+    font-size: 25px;
+    font-family: 'Dongle', sans-serif;
+}
+
 fieldset {
     display: flex;
     flex-flow: column wrap;
@@ -121,9 +127,6 @@ fieldset {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background-color: rgba(255, 255, 255, 0.801);
     border-radius: 20px;
-    width: 390px;
-    height: 320px;
-    padding-top: 25px;
 }
 
 form {
@@ -132,6 +135,10 @@ form {
     align-items: center;
     align-content: center;
     flex-flow: column wrap;
+    min-width: 390px;
+    max-width: 420px;
+    min-height: 380px;
+    max-height: 400px;
 }
 
 button {

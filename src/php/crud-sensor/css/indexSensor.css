@@ -63,68 +63,36 @@ body::-webkit-scrollbar-thumb {
 
 .conteudo-principal {
     display: flex;
+    align-items: center;
     align-content: center;
     justify-content: center;
-    margin-top: 200px;
-    height: 360px;
+    flex-flow: column wrap;
+    height: 550px;
     width: 100%;
+    gap: 10px;
 }
 
-.conteudo-principal-botoes {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-
-.login-botao {
-    font-family: 'Dongle', sans-serif;
-    font-size: 32px;
-    color: aliceblue;
-    cursor: pointer;
-    border-color: black;
-    width: 300px;
-    height: 50px;
-    background-color: rgb(0, 0, 0);
-    transition: 0.2s linear;
-}
-
-.login-botao:hover {
-    color: black;
-    scale: 1.02;
-    transition: 0.2s linear;
-    background-color: rgba(169, 255, 186, 1)
-}
-
-.cadastro-botao {
-    font-family: 'Dongle', sans-serif;
-    font-size: 32px;
-    color: aliceblue;
-    cursor: pointer;
-    border-color: black;
-    width: 300px;
-    height: 50px;
-    background-color: rgb(0, 0, 0);
-    transition: 0.2s linear;
-}
-
-.cadastro-botao:hover {
-    color: black;
-    transition: 0.2s linear;
-    scale: 1.02;
-    background-color: rgba(169, 255, 186, 1)
-}
-
-.conteudo-principal-texto {
+.conteudo-principal-titulo {
     font-family: 'Mukta', sans-serif;
-    color: black;
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 40px;
 }
 
-.cadastro-texto {
+button {
+    font-family: 'Dongle', sans-serif;
+    font-size: 32px;
+    margin-top: 20px;
     cursor: pointer;
-    color: rgb(255, 0, 0);
-    text-decoration: underline;
-    text-decoration-color: black;
+    color: aliceblue;
+    border-color: black;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s linear;
+}
+
+button:hover {
+    color: black;
+    scale: 1.02;
+    transition: 0.2s linear;
+    background-color: rgba(169, 255, 186, 1)
 }

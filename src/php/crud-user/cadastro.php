@@ -24,16 +24,18 @@
         <h1 class="conteudo-principal-titulo">Cadastre-se</h1>
         <fieldset>
             <form id="form" action="./adicionar.php" method="POST">
-                <td><input class="input" id="identificador" type="text" class="identificador-cad" name="identificador" placeholder="Idenficiador" maxlength="15" min="15" required></td>
+                <label>Nome:</label>
+                <input class="input" id="nome" type="text" class="nome-cad" name="nome" placeholder="Exemplo: Carlos Eduardo Da Silva" maxlength="50" min="20" required>
                 <div class="row">
                     <div class="col-12 col-s-12" id="divMensagensID">
                         <div class="alerta alerta-warning"></div>
                     </div>
-                </div>
-                <td><input class="input" id="nome" type="text" class="nome-cad" name="nome" placeholder="Nome Completo" maxlength="50" min="20" required></td>
-                <td><input class="input" id="email" type="email" class="email-cad" name="email" placeholder="Email" maxlength="25" required></td>
-                <td><input class="input" id="senha" type="password" class="senha-cad" name="senha" placeholder="Senha" maxlength="20" minlength="8" required></td>
-                <td><input class="input" id="confirme" type="password" class="confirm-senha-cad" name="confirmSenha" placeholder="Confirmar Senha" maxlength="20" minlength="8" required></td>
+                    </div>
+                    <label for="email">Email</label>
+                <input class="input" id="email" type="email" class="email-cad" name="email" placeholder="Exemplo: carlos@email.com" maxlength="25" required>
+                <label for="senha">Senha</label>
+                <input class="input" id="senha" type="password" class="senha-cad" name="senha" placeholder="Senha deve conter 8 carácter ou mais" maxlength="20" minlength="8" required>
+                <input class="input" id="confirme" type="password" class="confirm-senha-cad" name="confirmSenha" placeholder="Confirmar Senha" maxlength="20" minlength="8" required>
                 <div class="row">
                     <div class="col-12 col-s-12" id="divMensagens">
                         <div class="alerta alerta-warning"></div>

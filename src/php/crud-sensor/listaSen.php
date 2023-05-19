@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,19 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/css/usuarios.css">
+    <link rel="stylesheet" href="./css/listaSensor.css">
     <title>Usuarios</title>
 </head>
 
 <body>
     <header class="cabecalho">
+        <h1 class="cabecalho-titulo">TermoSens</h1>
         <a href="/"><img class="logo" src="/logo/icons8-termômetro-64.png" alt="Logo"></img></a>
         <img class="usuario-logo" src="/logo/icons8-usuário-67.png" alt="Usuario">
-        <nav>
-        </nav>
     </header>
 
-    <section>
+    <section class="conteudo-principal">
+        <h1 class="conteudo-principal-titulo">Sensores Cadastrados</h1>
         <div class="tabela">
             <table>
                 <tr class="tabela-titulos">
@@ -30,7 +28,7 @@
                 <?php $fp = fopen('sensores.csv', 'r') ?>
                 <?php while (($row = fgetcsv($fp)) !== false) : ?>
                     <tr class="usuarios-lista">
-                        <td class="id-usuario"><?= $row[0]?></td>
+                        <td class="id-usuario"><?= $row[0] ?></td>
                         <td class="nome-usuario"><?= $row[1] ?></td>
                         <td>
                             <form id="delete-form" action="delete.php" method="GET">

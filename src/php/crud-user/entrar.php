@@ -22,8 +22,10 @@
         <h1 class="conteudo-principal-titulo">Entre com sua conta</h1>
         <fieldset>
             <form action="../session/login.php" method="POST">
-                <input class="input" type="text" class="identificador-login" placeholder="Email" name="email" require />
-                <input class="input" type="password" class="senha-login" placeholder="Senha" name="senha" require />
+                <label for="email">Email:</label>
+                <input id="email" class="input" type="text" class="identificador-login" placeholder="Email" name="email" require />
+                <label for="senha">Senha:</label>
+                <input id="senha" class="input" type="password" class="senha-login" placeholder="Senha" name="senha" require />
                 <button type="submit" class="login-botao">Entrar</button>
                 <input class="voltar-botao" id="voltar" action="action" type="button" value="Voltar" onclick="window.history.go(-1); return false;">
             </form>
