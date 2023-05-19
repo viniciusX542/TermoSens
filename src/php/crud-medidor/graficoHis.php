@@ -18,11 +18,11 @@
       function drawChart() {  
         var data = google.visualization.arrayToDataTable([
           ['horas', 'temperatura'],
-          ['13:20',<?= $RegistroDeTemperatura[-2] ?>],
-          ['14:20',<?= $RegistroDeTemperatura[-1] ?>],
-          ['15:20',<?= $RegistroDeTemperatura[0] ?>],
-          ['16:20',<?= $RegistroDeTemperatura[1] ?>],
-          ['17:20',<?= $RegistroDeTemperatura[2] ?>],
+          ['13:20',<?= $RegistroDeTemperatura[0] ?>],
+          ['14:20',<?= $RegistroDeTemperatura[1] ?>],
+          ['15:20',<?= $RegistroDeTemperatura[2] ?>],
+          ['16:20',<?= $RegistroDeTemperatura[3] ?>],
+          ['17:20',<?= $RegistroDeTemperatura[4] ?>],
         ]);
 
         var options = {
