@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gráfico</title>
-
-    <?php
+</head>
+<body>
+  
+<?php
     $RegistroDeTemperatura = [-2,-1,0,1,2]
     ?>
 
@@ -37,12 +35,11 @@
 
         var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
-        chart.draw(data, options);
+        chart.draw(data, options)
       }
+      
     </script>
-
-</head>
-<body>
     <div id="curve_chart" style="width: 1500px; height: 800px"></div>
+    <input class="voltar-botao" id="voltar" action="action" type="button" value="Voltar" onclick="window.history.go(-1); return false;">
 </body>
 </html>
