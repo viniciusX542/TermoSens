@@ -34,8 +34,13 @@
                 </div>
                 <label for="nome">Nome:</label>
                 <input id="nome" type="text" class="input" name="nome" placeholder="Exemplo: Sensor 3" required>
+                <input id="ip" type="text" class="input" name="ip" placeholder="Exemplo: Sensor 3" required>
                 <button type="submit" class="enviar-botao">Cadastrar</button>
                 <input class="voltar-botao" id="voltar" action="action" type="button" value="Voltar" onclick="window.history.go(-1); return false;">
+                <td><input type="time" id="hora" name="hora" required></td>
+                <td><input type="range" id="intervalo" name="tempo-para-medir" min="0" max="60">60</td>
+                <td><input type="date" id="diasmedidos" name="historico" required></td>
+                <td><input type='number' id='valor' name='valor-da-temperatura'></td>
             </form>
         </fieldset>
 
